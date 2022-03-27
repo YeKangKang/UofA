@@ -1,0 +1,167 @@
+/* Task2-2 */
+#t22h1 {
+    font-family: sans-serif;
+}
+
+.t22p {
+    font-family: serif;
+}
+
+#t22a {
+    color: darkgreen;
+}
+
+#t22del {
+    color: grey;
+}
+
+#t22m {
+    background-color: pink;
+    color: darkblue;
+}
+
+#t22h2 {
+    text-align: left;
+    font-family: sans-serif;
+}
+
+#t22pre {
+    font-family: monospace;
+}
+
+/* Task2-3 */
+#t23h3 {
+    color: rgb(0,0,139,0.8);
+}
+
+.transparent-text {
+    color: rgb(0,0,0,50%);
+}
+
+/* Task2-4 */
+.bluebackground {
+    background-image: url(cross.png);
+    background-color: #DCF5F5;
+    background-repeat: repeat;
+}
+
+/* Task2-5 */
+#content {
+    background-color: white;
+}
+
+.blue {
+    color: blue;
+}
+
+.fancy {
+    font-family: cursive;
+}
+
+#t25s {
+    color: blue;
+    font-family: cursive;
+}
+
+/* Task2-6 */
+#t26d {
+    border-style: solid;
+    border-width: 1px;
+    background-color: white;
+    border-radius: 8px;
+    border-color: darkgrey;
+}
+
+.red-border {
+    border-style: solid;
+    border-color: red;
+}
+
+#t26hr {
+    border-color: #CFDFE4;
+}
+
+.red-outline {
+    outline-style: solid;
+    outline-color: red;
+}
+
+#t26d1 {
+    border-style: solid;
+    border-color: red;
+}
+
+#t26d2 {
+    border-style: solid;
+    border-color: blue;
+}
+
+#t26d3 {
+    border-style: solid;
+    border-bottom-style: none;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-color: red;
+}
+
+#t26d4 {
+    border-style: solid;
+    border-color: blue;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+/* Task2-7 */
+#t27tou {
+    background-color: blue;
+    border:1px solid red;
+}
+#t27tin {
+    background-color: yellow;
+    height: 174px;
+    width: 674px;
+    text-align: right;
+    border: 1px solid red;
+    margin: 10px 20px;
+    padding: 12px;
+}
+
+#t27bou {
+    margin-top: 20px;
+    background-color: blue;
+    border: 1px solid red;
+}
+
+#t27bin {
+    background-color: yellow;
+    text-align: right;
+    margin: auto;
+    padding: 12px;
+    border: 1px solid red;
+    width: 374px;
+    height: 374px;
+}
+
+/* Task2-8 */
+#t28b {
+    font-family: 'Noto Serif', serif;
+}
+
+.t28h1h2 {
+    font-family: 'Raleway', sans-serif;
+}
+
+#t28q {
+    font-family: 'Raleway', serif;
+    color: dimgrey;
+    line-height: 1.5;
+    word-spacing: 0.2em;
+    text-align: justify;
+}
+
+#t28h4 {
+    font-family: 'Raleway';
+    text-decoration: underline;
+    font-weight: normal;
+    font-style: italic;
+}
