@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# do 25 times
+# inside loop read file as input
+# reat 'line' times i.e. number of line in the file
+# for each line shift 1 save result as pattern
+# use tr decode each line
+
+
+for i in $(seq 1 25)                    # shift 1-25
+do
+    echo "Shift $i"
+
+    cat $1 | while read -r line         # cat #1 input and pipe into while save as var line
+    do
+        pattern=$(./create_pattern -n $i -u)        # for each line find pattern and shift as 1-25
+        echo $line | tr '[A-Z]' $pattern            # pipe line text into tr and use pattern decoded, echo out
+    done
+done

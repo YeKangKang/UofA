@@ -1,0 +1,3 @@
+ls -s1
+sort -n
+tail -n 5

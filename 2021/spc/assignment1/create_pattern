@@ -1,0 +1,60 @@
+#!/bin/bash
+
+#++++++++++++++++++++++++++++++++++++++++++++++++#
+# $# == 2 Or $# == 3
+##########################################
+# If $# == 3 Then $1 only have 2 possible
+# $1 == "-n" $2 == "num" and $3 == "-u"
+# Or
+# $1 == "-u" and $2 == "-n" $3 == "num"
+##########################################
+# If $# == 2 Then only $1 == "-n" and $2 == num
+#++++++++++++++++++++++++++++++++++++++++++++++++#
+
+if [ $# -ne 2 ]
+then
+    if [ $1 == "-n" ]        # -n num -u #
+    then
+        num=$(($2%26))          # get abs loc inside ASCII table
+        result=1                # case 1
+    elif [ $1 == "-u" ]     # -u -n num #
+    then
+        num=$(($3%26))          # same
+        result=1                # case 1
+    fi
+else
+    num=$(($2%26))          # -n num #
+    result=2                    # case 2
+fi
+
+# ASCII num for 'A' and 'a'
+upper=65                       # A=65
+lower=97                       # a=97
+
+# NOW FOR THE tr PART
+if [ $result == 1 ]                 # for case 1 Upper
+then
+    if [ $num == 0 ]                # no shift
+    then
+        echo [A-Z]
+    else                            # shift num
+        leftchar=$(($upper+$num))           # STAR
+        rightchar=$(($upper+$num-1))        # END
+        # convert as to char syntax
+        leftchar=$(printf \\x`printf %x $leftchar`)
+        rightchar=$(printf \\x`printf %x $rightchar`)
+        echo [$leftchar-ZA-$rightchar]
+    fi
+else                                # for case 2 Lower
+    if [ $num == 0 ]
+    then
+        echo [a-z]                  # no shift
+    else
+        leftchar=$(($lower+$num))           # STAR
+        rightchar=$(($lower+$num-1))        # END
+        # convert as to char syntax
+        leftchar=$(printf \\x`printf %x $leftchar`)
+        rightchar=$(printf \\x`printf %x $rightchar`)
+        echo [$leftchar-za-$rightchar]
+    fi
+fi

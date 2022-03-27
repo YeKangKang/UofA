@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#++++++++++++++++++++++++++++++++#
+# for each line call 1st script and save the pattern
+# do encoded for line
+# pip that output into tr and echo out
+
+# test
+#b=`sh ./create_pattern $1 $2 $3`
+#echo $(cat ./test | tr '[A-Z]' "$b")
+
+while read LINE                     # if have Line, read it and encoded
+do
+    if [ $# -eq 2 ]                 # for lower case
+    then
+        pattern=$(./create_pattern $1 $2 $3)    # save string
+        echo $LINE | tr '[a-z]' $pattern        # pipe val of LINE to tr
+    else                            # upper case
+        pattern=$(./create_pattern $1 $2 $3)    # same
+        echo $LINE | tr '[A-Z]' $pattern
+    fi
+done
